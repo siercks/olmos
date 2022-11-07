@@ -1,0 +1,21 @@
+﻿@page "/videos"
+
+<PageTitle>Videos</PageTitle>
+
+<h1>Videos</h1><br /><br />
+
+<video width="450" height="800" controls>
+    <source src="loop.MOV" type="video/mp4">
+    <object data="loop.MOV" width="1080" height="1920">
+        <embed width="1080" height="1920" src="loop.MOV">
+    </object>
+</video>
+
+@code {
+    private int currentCount = 0;
+
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+}
