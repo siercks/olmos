@@ -4,6 +4,17 @@ html, body {
     font-family: Garamond;
 }
 
+img {
+    width: auto;
+}
+
+.home-pic {
+    float: right;
+    border-radius: 50%;
+    width: 30%;
+    height: auto;
+}
+
 h1:focus {
     outline: none;
 }

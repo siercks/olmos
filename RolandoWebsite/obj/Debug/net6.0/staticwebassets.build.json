@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "bE9pG0fCxg6fKX1okjRzihc8vKe/X6X+Edwe7CeFpGs=",
+  "Hash": "0b2IlUbtggxCxZFpJJkggRrQ3Us/2gQSjiDtOzw/7f4=",
   "Source": "RolandoWebsite",
   "BasePath": "/",
   "Mode": "Root",
@@ -7138,6 +7138,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\sample-data\\weather.json"
+    },
+    {
+      "Identity": "C:\\Users\\siercks\\Documents\\GitHub\\olmos\\RolandoWebsite\\wwwroot\\style.css",
+      "SourceId": "RolandoWebsite",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\siercks\\Documents\\GitHub\\olmos\\RolandoWebsite\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "style.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\style.css"
     },
     {
       "Identity": "C:\\Users\\siercks\\Documents\\GitHub\\olmos\\RolandoWebsite\\wwwroot\\video.MOV",
