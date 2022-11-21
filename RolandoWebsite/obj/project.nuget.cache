@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "5mfR6LPELfvZs4OiwTZhRddUfCpmLWa9BZPcW/E8GBj7Mor62AUcGo2c4E5UWs426b7fhiJbgXQ+e9VFcmc5EQ==",
+  "dgSpecHash": "/YPHuerSAFsFoI86bpLumUQSQRteQt0JQ5r5VlCNw6xT0O5ShAQzX8ItLY2m/6IECRoRCkAX/v1PhlAwOPJuZA==",
   "success": true,
   "projectFilePath": "C:\\Users\\siercks\\Documents\\GitHub\\olmos\\RolandoWebsite\\RolandoWebsite.csproj",
   "expectedPackageFiles": [
@@ -33,7 +33,7 @@
     "C:\\Users\\siercks\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\siercks\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
     "C:\\Users\\siercks\\.nuget\\packages\\system.text.json\\6.0.0\\system.text.json.6.0.0.nupkg.sha512",
-    "C:\\Users\\siercks\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.9\\microsoft.netcore.app.runtime.mono.browser-wasm.6.0.9.nupkg.sha512"
+    "C:\\Users\\siercks\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.11\\microsoft.netcore.app.runtime.mono.browser-wasm.6.0.11.nupkg.sha512"
   ],
   "logs": []
 }
