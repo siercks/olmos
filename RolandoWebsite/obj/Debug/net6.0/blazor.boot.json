@@ -196,13 +196,13 @@
       "mscorlib.dll": "sha256-cx\/3nJhFns3tZhQNQOyiRyKJESKxOjLVufzWnri6KSA=",
       "netstandard.dll": "sha256-yWufW5W4SSfjocBcWTEDqnFwTd\/VYtLMc2Y9mPmlggc=",
       "System.Private.CoreLib.dll": "sha256-H009wzPwRoDZlwvpN4KLCsUwN7Y1AmjKB3PIEHA7ObQ=",
-      "RolandoWebsite.dll": "sha256-3gVjx2XdqEuRH\/qHlbST23T1vyAt8HNTRQWTgwtXtfc="
+      "RolandoWebsite.dll": "sha256-zRqsvNux2z2bnqsOaQ8kJ9bpdypn0JWiIGmApC2zTp4="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "RolandoWebsite.pdb": "sha256-b02P++Nv4wiACcdgQqFCHGHL9d\/BuMPn2ATgjDWsmfY="
+      "RolandoWebsite.pdb": "sha256-6JWhcxgDUl+NnalNro9A62Nhhno23IpUJElQBjxySuQ="
     },
     "runtime": {
       "dotnet.6.0.11.rq2kmpab2u.js": "sha256-F30V+6jU3jwJYFZoLuwMAqzTiOXu6q7zGgOdjYBofDI=",
