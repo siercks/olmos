@@ -3,6 +3,10 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
+
+
+builder.Services.AddDbContext<UserContext>(options => options.UseSqlServer("Server=SIERX\\SQLEXPRESS;Database=OlmosAdmin;Trusted_Connection=true;TrustServerCertificate=True;MultipleActiveResultSets=True"));
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
