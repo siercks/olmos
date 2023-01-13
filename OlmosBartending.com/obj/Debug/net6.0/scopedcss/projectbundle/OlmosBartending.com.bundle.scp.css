@@ -1,49 +1,93 @@
 /* _content/OlmosBartending.com/Views/Shared/_Layout.cshtml.rz.scp.css */
-/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
-
-a.navbar-brand[b-ppbs8a92ej] {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+.page[b-ppbs8a92ej] {
+    position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
-a[b-ppbs8a92ej] {
-  color: #0077cc;
+main[b-ppbs8a92ej] {
+    flex: 1;
 }
 
-.btn-primary[b-ppbs8a92ej] {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+.sidebar[b-ppbs8a92ej] {
+    background-image: linear-gradient(180deg, #ffa500 0%, #a88f59 70%);
 }
 
-.nav-pills .nav-link.active[b-ppbs8a92ej], .nav-pills .show > .nav-link[b-ppbs8a92ej] {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+img[b-ppbs8a92ej] {
+    width: auto;
 }
 
-.border-top[b-ppbs8a92ej] {
-  border-top: 1px solid #e5e5e5;
-}
-.border-bottom[b-ppbs8a92ej] {
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.box-shadow[b-ppbs8a92ej] {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+.home-pic[b-ppbs8a92ej] {
+    float: right;
+    border-radius: 50%;
+    width: 30%;
+    height: auto;
 }
 
-button.accept-policy[b-ppbs8a92ej] {
-  font-size: 1rem;
-  line-height: inherit;
+.top-row[b-ppbs8a92ej] {
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #d6d5d5;
+    justify-content: flex-end;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
 }
 
-.footer[b-ppbs8a92ej] {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px;
+    .top-row[b-ppbs8a92ej]  a, .top-row[b-ppbs8a92ej]  .btn-link {
+        white-space: nowrap;
+        margin-left: 1.5rem;
+        text-decoration: none;
+    }
+
+        .top-row[b-ppbs8a92ej]  a:hover, .top-row[b-ppbs8a92ej]  .btn-link:hover {
+            text-decoration: underline;
+        }
+
+        .top-row[b-ppbs8a92ej]  a:first-child {
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+@media (max-width: 640.98px) {
+    .top-row:not(.auth)[b-ppbs8a92ej] {
+        display: none;
+    }
+
+    .top-row.auth[b-ppbs8a92ej] {
+        justify-content: space-between;
+    }
+
+    .top-row[b-ppbs8a92ej]  a, .top-row[b-ppbs8a92ej]  .btn-link {
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 641px) {
+    .page[b-ppbs8a92ej] {
+        flex-direction: row;
+    }
+
+    .sidebar[b-ppbs8a92ej] {
+        width: 250px;
+        height: 100vh;
+        position: sticky;
+        top: 0;
+    }
+
+    .top-row[b-ppbs8a92ej] {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+
+        .top-row.auth[b-ppbs8a92ej]  a:first-child {
+            flex: 1;
+            text-align: right;
+            width: 0;
+        }
+
+    .top-row[b-ppbs8a92ej], article[b-ppbs8a92ej] {
+        padding-left: 2rem !important;
+        padding-right: 1.5rem !important;
+    }
 }

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "V60/SuxU5UvQgxZfk4EsrC6OuViThbqd4g7kPOsUsoQ=",
+  "Hash": "4cLBkXP9T82sP3dna1XtT6y+zEGe0B1jYJ1Xw8uugf4=",
   "Source": "OlmosBartending.com",
   "BasePath": "_content/OlmosBartending.com",
   "Mode": "Default",
@@ -1069,6 +1069,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\siercks\\Documents\\GitHub\\olmos\\OlmosBartending.com\\wwwroot\\pose.jpg",
+      "SourceId": "OlmosBartending.com",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\siercks\\Documents\\GitHub\\olmos\\OlmosBartending.com\\wwwroot\\",
+      "BasePath": "_content/OlmosBartending.com",
+      "RelativePath": "pose.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\pose.jpg"
     }
   ]
 }
