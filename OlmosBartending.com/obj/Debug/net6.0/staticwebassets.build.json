@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "4cLBkXP9T82sP3dna1XtT6y+zEGe0B1jYJ1Xw8uugf4=",
+  "Hash": "Q7owGYPYg4my848wSHVLCHiEuFpQlixENm9Fv9VeP6g=",
   "Source": "OlmosBartending.com",
   "BasePath": "_content/OlmosBartending.com",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\siercks\\Documents\\GitHub\\olmos\\OlmosBartending.com\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\OlmosBartending.com.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\siercks\\Documents\\GitHub\\olmos\\OlmosBartending.com\\wwwroot\\css\\booking.css",
+      "SourceId": "OlmosBartending.com",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\siercks\\Documents\\GitHub\\olmos\\OlmosBartending.com\\wwwroot\\",
+      "BasePath": "_content/OlmosBartending.com",
+      "RelativePath": "css/booking.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\booking.css"
     },
     {
       "Identity": "C:\\Users\\siercks\\Documents\\GitHub\\olmos\\OlmosBartending.com\\wwwroot\\css\\site.css",

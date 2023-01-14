@@ -1,0 +1,35 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+.page {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    font-family: Garamond;
+}
+
+img {
+    width: auto;
+}
+
+.profile {
+    width: 50%;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    float: right;
+}

@@ -11,7 +11,7 @@ namespace OlmosBartending.com.Services
         }
         public Appointment GetAppointment(int id)
         {
-            throw new NotImplementedException();
+            return _apptContext.AppointmentList.Find(id);
         }
 
         public List<Appointment> GetAppointmentList()
@@ -21,7 +21,11 @@ namespace OlmosBartending.com.Services
 
         public int GetMaxId()
         {
-            throw new NotImplementedException();
+            return _apptContext.AppointmentList.Max(x => x.EventId) + 1;
+        }
+        public void UpdateAppointment()
+        {
+
         }
     }
 }

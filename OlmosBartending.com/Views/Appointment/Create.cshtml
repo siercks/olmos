@@ -1,0 +1,59 @@
+﻿@model OlmosBartending.com.Models.Appointment
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_LayoutBooking.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>Appointment</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="EventId" class="control-label"></label>
+                <input asp-for="EventId" class="form-control" />
+                <span asp-validation-for="EventId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CustomerName" class="control-label"></label>
+                <input asp-for="CustomerName" class="form-control" />
+                <span asp-validation-for="CustomerName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CustomerEmail" class="control-label"></label>
+                <input asp-for="CustomerEmail" class="form-control" />
+                <span asp-validation-for="CustomerEmail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ServiceRequested" class="control-label"></label>
+                <input asp-for="ServiceRequested" class="form-control" />
+                <span asp-validation-for="ServiceRequested" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DateRequested" class="control-label"></label>
+                <input asp-for="DateRequested" class="form-control" />
+                <span asp-validation-for="DateRequested" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OptionalMessage" class="control-label"></label>
+                <input asp-for="OptionalMessage" class="form-control" />
+                <span asp-validation-for="OptionalMessage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

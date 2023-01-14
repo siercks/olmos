@@ -7,10 +7,16 @@ using OlmosBartending.com.Models;
 
 namespace OlmosBartending.com.Controllers
 {
-    public class BookingController : Controller
+    public class AppointmentController : Controller
     {
         private SignInManager<User> signInManager;
         private UserManager<User> userManager;
+        public AppointmentController(SignInManager<User> signInManager, UserManager<User> userManager)
+        {
+            this.signInManager = signInManager;
+            this.userManager = userManager;
+        }
+
         // GET: BookingController
         public ActionResult Index()
         {
@@ -22,9 +28,8 @@ namespace OlmosBartending.com.Controllers
         {
             return View();
         }
-
-        // GET: BookingController/Create
-        public ActionResult Create()
+        [HttpPost]
+        public IActionResult Create()
         {
             return View();
         }

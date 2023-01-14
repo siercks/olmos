@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\OlmosBartending.com.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\siercks\\Documents\\GitHub\\olmos\\OlmosBartending.com\\wwwroot\\css\\booking.css",
+      "PackagePath": "staticwebassets\\css\\booking.css"
+    },
+    {
       "Id": "C:\\Users\\siercks\\Documents\\GitHub\\olmos\\OlmosBartending.com\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
