@@ -12,35 +12,45 @@
 <body>
     <div class="page">
         <div class="sidebar">
-            <NavMenu />
+           <nav class="flex-column">
+                <div class="nav-item px-3">
+                    <a asp-controller="Home" asp-action="Privacy" class="nav-link">
+                        <span class="oi oi-laptop" aria-hidden="true"></span> Privacy
+                        </a>
+                </div>
+                <div class="nav-item px-3">
+                    <a asp-controller="Home" asp-action="Index">Index</a>
+                </div>
+                <div class="nav-item px-3">
+                    <a asp-controller="Home" asp-action="Privacy">Privacy</a>
+                </div>
+           </nav>
         </div>
 
         <main>
-            <div class="top-row px-4">
-                @*<NavLink class="nav-link" href="" target="_blank">About</NavLink>*@
-                <a href="https://siercks.org">Contact Site Owner</a>
-            </div>
-
             <article class="content px-4">
-                @*@Body*@
                 @RenderBody()
             </article>
         </main>
-    </div>
-    @*<div class="container">
-        <main role="main" class="pb-3">
-            
-        </main>
-    </div>*@
 
+    </div>
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2023 - OlmosBartending.com - <a asp-area="" asp-controller="Home" asp-action="Index">Home Page</a>
+            &copy; 2023 - OlmosBartending.com - <a asp-area="" asp-controller="Appointment" asp-action="Index">Home Page</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
+
 </body>
 </html>
+@*@{
+    private bool collapseNavMenu = true;
+    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+    void ToggleNavMenu()
+        {
+            //
+        }
+}*@

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "LxMJSWo1lyZ2/wqG8vf2SaUT2Dgm543o9FIjfoYo/ms=",
+  "Source": "olmos_backend",
+  "BasePath": "_content/olmos_backend",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

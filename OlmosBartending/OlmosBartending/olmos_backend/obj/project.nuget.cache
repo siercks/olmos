@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "cetzk7CYkrPZo39FJqRzVcEZF1BAzFeoOP6RY3Cv9xJUxT2wxVmQ3oZWNuPpymT6kND/SP1s3KiaAprnvWNBUA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\siercks\\Documents\\GitHub\\olmos\\OlmosBartending\\OlmosBartending\\olmos_backend\\olmos_backend.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\siercks\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\siercks\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\siercks\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "C:\\Users\\siercks\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "C:\\Users\\siercks\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "C:\\Users\\siercks\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -20,7 +20,7 @@ namespace OlmosBartending.com.Controllers
         // GET: BookingController
         public ActionResult Index()
         {
-            return View();
+            return RedirectToAction(nameof(Index));
         }
 
         // GET: BookingController/Details/5

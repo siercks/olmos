@@ -1,0 +1,2 @@
+C:\Users\siercks\Documents\GitHub\olmos\OlmosBartending\OlmosBartending\olmos_frontend\obj\Debug\olmos_frontend.esproj.SuggestedBindingRedirects.cache
+C:\Users\siercks\Documents\GitHub\olmos\OlmosBartending\OlmosBartending\olmos_frontend\obj\Debug\olmos_frontend.esproj.CoreCompileInputs.cache
