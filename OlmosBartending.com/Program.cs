@@ -11,8 +11,11 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 builder.Services.AddScoped<ICRUD, DBcrud>();
-builder.Services.AddDbContext<UserContext>(options => options.UseSqlite("Data Source=UserList.db"));
-builder.Services.AddDbContext<AppointmentContext>(options => options.UseSqlite("Data Source=AppointmentList.db"));
+//builder.Services.AddDbContext<UserContext>(options => options.UseSqlite("Data Source=UserList.db"));
+//builder.Services.AddDbContext<AppointmentContext>(options => options.UseSqlite("Data Source=AppointmentList.db"));
+builder.Services.AddDbContext<AppointmentContext>(options => options.UseSqlServer("Server=SIERX\\SQLEXPRESS;Database=OlmosAppointmentList;Trusted_Connection=true;TrustServerCertificate=True;MultipleActiveResultSets=True"));
+builder.Services.AddDbContext<UserContext>(options => options.UseSqlServer("Server=SIERX\\SQLEXPRESS;Database=OlmosUsers;Trusted_Connection=true;TrustServerCertificate=True;MultipleActiveResultSets=True"));
+
 builder.Services.AddIdentity<User, IdentityRole>(options =>
 {
     options.Lockout.MaxFailedAccessAttempts = 4;

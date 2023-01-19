@@ -11,7 +11,11 @@ namespace OlmosBartending.com.Services
         }
         public void AddAppointment(Appointment appointment)
         {
-            //
+            //if (appointment.ServiceRequested.ToString() == "Birthday") { appointment.ServiceRequested = 1; }
+            //if (appointment.ServiceRequested.ToString() == "") { appointment.ServiceRequested = 2; }
+            //if (appointment.ServiceRequested.ToString() == "") { appointment.ServiceRequested = 3; }
+            //if (appointment.ServiceRequested.ToString() == "") { appointment.ServiceRequested = 4; }
+            //if (appointment.ServiceRequested.ToString() == "") { appointment.ServiceRequested = 5; }
         }
         public Appointment GetAppointment(int id)
         {

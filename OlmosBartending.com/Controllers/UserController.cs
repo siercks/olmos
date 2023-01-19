@@ -15,11 +15,19 @@ namespace OlmosBartending.com.Controllers
             this.signInManager = signInManager;
             this.userManager = userManager;
         }
+        public IActionResult Login()
+        {
+            if(User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Index", "Appointment");
+            }
+            return View();
+        }
 
         [HttpPost]
         public async Task<IActionResult> Login(LoginViewModel loginViewModel)
         {
-            if (!ModelState.IsValid)
+            if (ModelState.IsValid)
             {
                 var result = await signInManager.PasswordSignInAsync(loginViewModel.UserName, loginViewModel.Password, loginViewModel.RememberMe, lockoutOnFailure:false);
                 if (result.Succeeded)
@@ -50,13 +58,13 @@ namespace OlmosBartending.com.Controllers
                 {
                     if (newUser.UserName == "rolando")
                     {
-                        await userManager.AddToRoleAsync(newUser, "Admin");
+                        await userManager.AddToRoleAsync(newUser, "admin");
                     }
                     else
                     {
-                        await userManager.AddToRoleAsync(newUser, "Requestor");
+                        await userManager.AddToRoleAsync(newUser, "client");
                     }
-                    return RedirectToAction("Login", "User");
+                    return RedirectToAction("Index", "Home");
                 }
                 foreach(var error in result.Errors)
                 {
