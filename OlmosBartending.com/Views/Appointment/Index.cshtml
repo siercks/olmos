@@ -1,0 +1,38 @@
+﻿@model OlmosBartending.com.Models.IndexViewModel
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutBooking.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @*displaying property name *@
+                @Html.DisplayNameFor(model=>model.AppointmentList.First().EventId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model=>model.AppointmentList.First().CustomerName)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.AppointmentList)
+        {
+                <tr>
+                    <td>#@Html.DisplayFor(modelitem=>item.EventId)</td>@*property value*@
+                    <td>@Html.DisplayFor(modelitem=>item.CustomerName)</td>
+                    <td>
+                    <a asp-action="Details" asp-controller="Appointment" asp-route-id="@item.EventId">Details</a> |
+                    <a asp-action="Edit" asp-controller="Appointment" asp-route-id="@item.EventId">Edit</a> |
+                    <a asp-action="Delete" asp-controller="Appointment" asp-route-id="@item.EventId">Delete</a>
+                    </td>
+                </tr>
+        }
+    </tbody>
+</table>

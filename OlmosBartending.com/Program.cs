@@ -11,13 +11,14 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 builder.Services.AddScoped<ICRUD, DBcrud>();
-builder.Services.AddDbContext<UserContext>(options => options.UseSqlite("Data Source=AppointmentList.db"));
+builder.Services.AddDbContext<UserContext>(options => options.UseSqlite("Data Source=UserList.db"));
 builder.Services.AddDbContext<AppointmentContext>(options => options.UseSqlite("Data Source=AppointmentList.db"));
-
+builder.Services.AddIdentity<User, IdentityRole>(options =>
+{
+    options.Lockout.MaxFailedAccessAttempts = 4;
+}).AddEntityFrameworkStores<UserContext>();
 //builder.Services.AddDbContext<UserContext>(options => options.UseSqlServer("Server=SIERX\\SQLEXPRESS;Database=OlmosAdmin;Trusted_Connection=true;TrustServerCertificate=True;MultipleActiveResultSets=True"));
-
 var app = builder.Build();
-
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
@@ -26,19 +27,15 @@ if (!app.Environment.IsDevelopment())
 }
 using (var scope = app.Services.CreateScope())
 {
-    var userContext = scope.ServiceProvider.GetService<UserContext>();
-    userContext.Database.EnsureCreated();
-    var appointmentContext = scope.ServiceProvider.GetService<AppointmentContext>();
-    appointmentContext.Database.EnsureCreated();
+    var userDbContext = scope.ServiceProvider.GetRequiredService<UserContext>();
+    userDbContext.Database.EnsureCreated();
+    var appointmentDbContext = scope.ServiceProvider.GetRequiredService<AppointmentContext>();
+    appointmentDbContext.Database.EnsureCreated();
 }
-
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-
 app.UseRouting();
-
 app.UseAuthorization();
-
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");

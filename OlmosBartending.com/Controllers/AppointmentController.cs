@@ -2,25 +2,24 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using OlmosBartending.com.Models;
-
-//using OlmosBartending.ViewModels;
+using OlmosBartending.com.Services;
+//using OlmosBartending.com.Services;
 
 namespace OlmosBartending.com.Controllers
 {
     public class AppointmentController : Controller
     {
-        private SignInManager<User> signInManager;
-        private UserManager<User> userManager;
-        public AppointmentController(SignInManager<User> signInManager, UserManager<User> userManager)
+        private ICRUD iCRUD;
+        public AppointmentController(ICRUD iCRUD)
         {
-            this.signInManager = signInManager;
-            this.userManager = userManager;
+            this.iCRUD = iCRUD;
         }
-
         // GET: BookingController
-        public ActionResult Index()
+        public IActionResult Index()
         {
-            return RedirectToAction(nameof(Index));
+            IndexViewModel model = new IndexViewModel();
+            model.AppointmentList = iCRUD.GetAppointmentList();
+            return View(model);
         }
 
         // GET: BookingController/Details/5

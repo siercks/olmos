@@ -9,6 +9,10 @@ namespace OlmosBartending.com.Services
         {
             _apptContext = apptContext;
         }
+        public void AddAppointment(Appointment appointment)
+        {
+            //
+        }
         public Appointment GetAppointment(int id)
         {
             return _apptContext.AppointmentList.Find(id);
@@ -23,9 +27,19 @@ namespace OlmosBartending.com.Services
         {
             return _apptContext.AppointmentList.Max(x => x.EventId) + 1;
         }
-        public void UpdateAppointment()
+        public void UpdateAppointment(Appointment appointment)
         {
-
+            var apptToUpdate = _apptContext.AppointmentList.Find(appointment.EventId);
+            if (apptToUpdate != null)
+            {
+                apptToUpdate.EventId = appointment.EventId;
+                apptToUpdate.CustomerName = appointment.CustomerName;
+                apptToUpdate.CustomerEmail = appointment.CustomerEmail;
+                apptToUpdate.DateRequested = appointment.DateRequested;
+                apptToUpdate.ServiceRequested= appointment.ServiceRequested;
+                apptToUpdate.OptionalMessage = appointment.OptionalMessage;
+                _apptContext.SaveChanges();
+            }
         }
     }
 }

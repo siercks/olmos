@@ -16,7 +16,7 @@ namespace OlmosBartending.com.Services
         }
         void UpdateAppointment(Appointment appointment)
         {
-            return;
+            //
         }
         int GetMaxId();
         
