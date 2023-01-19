@@ -28,7 +28,7 @@ namespace OlmosBartending.com.Controllers
         {
             return View();
         }
-        [HttpPost]
+        //[HttpPost]
         //[Authorize(Roles ="admin, sierx, client")]
         public IActionResult Create()
         {
@@ -40,18 +40,15 @@ namespace OlmosBartending.com.Controllers
         // POST: BookingController/Create
         [HttpPost]
         //[ValidateAntiForgeryToken]
-        public IActionResult Create(IFormCollection collection)
+        public async Task<ActionResult> Create(Appointment appointment, IFormCollection collection)
         {
-            try
+            if(ModelState.IsValid)
             {
-                var newAppt = new Appointment();
-                newAppt.EventId = iCRUD.GetMaxId();
-                return View(newAppt);
+                iCRUD.AddAppointment(appointment);
+                return RedirectToRoute(new { Action = "Index", Controller = "Appointment" });
             }
-            catch
-            {
-                return View();
-            }
+            ViewBag.Message = "Error adding appointment. Please try again?";
+            return View(appointment);
         }
 
         // GET: BookingController/Edit/5
