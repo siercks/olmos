@@ -5,23 +5,36 @@ namespace OlmosBartending.com.Services
     public class DBcrud:ICRUD
     {
         private AppointmentContext _apptContext;
+        //private List<Appointment> apptList;
         public DBcrud(AppointmentContext apptContext)
         {
             _apptContext = apptContext;
+            //apptList= new List<Appointment>();
         }
         public void AddAppointment(Appointment appointment)
         {
-            //if (appointment.ServiceRequested.ToString() == "Birthday") { appointment.ServiceRequested = 1; }
-            //if (appointment.ServiceRequested.ToString() == "") { appointment.ServiceRequested = 2; }
-            //if (appointment.ServiceRequested.ToString() == "") { appointment.ServiceRequested = 3; }
-            //if (appointment.ServiceRequested.ToString() == "") { appointment.ServiceRequested = 4; }
-            //if (appointment.ServiceRequested.ToString() == "") { appointment.ServiceRequested = 5; }
+            _apptContext.AppointmentList.Add(appointment);
+            _apptContext.SaveChanges();
         }
-        public Appointment GetAppointment(int id)
+        public void DeleteAppointment(int? id)
         {
-            return _apptContext.AppointmentList.Find(id);
+            var apptToDelete = _apptContext.AppointmentList.Find(id);
+            if(apptToDelete !=null)
+            {
+                _apptContext.AppointmentList.Remove(apptToDelete);
+            }
         }
-
+        public Appointment GetAppointment(int? id)
+        {
+            if(id==null)
+            {
+                return null;
+            }
+            else
+            {
+                return _apptContext.AppointmentList.Find(id);
+            }
+        }
         public List<Appointment> GetAppointmentList()
         {
             return new List<Appointment>(_apptContext.AppointmentList);
@@ -45,5 +58,10 @@ namespace OlmosBartending.com.Services
                 _apptContext.SaveChanges();
             }
         }
+        //int ICRUD.GetMaxId()
+        //{
+        //    int maxId = apptList.Max(x => x.EventId);
+        //    return maxId + 1 ;
+        //}
     }
 }

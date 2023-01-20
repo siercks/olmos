@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Identity.Client;
 using OlmosBartending.com.Models;
 using OlmosBartending.com.Services;
 //using OlmosBartending.com.Services;
@@ -40,12 +41,12 @@ namespace OlmosBartending.com.Controllers
         // POST: BookingController/Create
         [HttpPost]
         //[ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create(Appointment appointment, IFormCollection collection)
+        public async Task<ActionResult> Create(Appointment appointment)
         {
             if(ModelState.IsValid)
             {
                 iCRUD.AddAppointment(appointment);
-                return RedirectToRoute(new { Action = "Index", Controller = "Appointment" });
+                return RedirectToAction("Index");
             }
             ViewBag.Message = "Error adding appointment. Please try again?";
             return View(appointment);
@@ -54,22 +55,22 @@ namespace OlmosBartending.com.Controllers
         // GET: BookingController/Edit/5
         public IActionResult Edit(int id)
         {
-            return View();
+            var apptToEdit = iCRUD.GetAppointment(id);
+            return View(apptToEdit);
         }
 
         // POST: BookingController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Edit(int id, IFormCollection collection)
+        public IActionResult Edit(Appointment appt)
         {
-            try
+            if(ModelState.IsValid)
             {
-                return RedirectToAction(nameof(Index));
+                iCRUD.UpdateAppointment(appt);
+                return RedirectToAction("Index");
             }
-            catch
-            {
-                return View();
-            }
+            ViewBag.Message = "Error editing appointment.";
+            return View(appt);
         }
 
         // GET: BookingController/Delete/5
