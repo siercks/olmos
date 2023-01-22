@@ -15,7 +15,7 @@ namespace OlmosBartending.com.Models
     {
         [Display(Name = "Booking Request")]
         [Required(ErrorMessage ="Field cannot be empty.")]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
         public int EventId { get; set; }
         [Display(Name = "Your Name")]

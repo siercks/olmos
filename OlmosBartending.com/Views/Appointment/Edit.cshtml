@@ -31,7 +31,9 @@
             </div>
             <div class="form-group">
                 <label asp-for="ServiceRequested" class="control-label"></label>
-                <input asp-for="ServiceRequested" class="form-control" />
+                <select asp-for="ServiceRequested" asp-items="Html.GetEnumSelectList<ServiceRequested>()">
+                <option value="">Please select:</option>
+                </select>
                 <span asp-validation-for="ServiceRequested" class="text-danger"></span>
             </div>
             <div class="form-group">
