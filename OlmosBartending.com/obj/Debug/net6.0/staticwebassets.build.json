@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Q7owGYPYg4my848wSHVLCHiEuFpQlixENm9Fv9VeP6g=",
+  "Hash": "15DPvcXuFCSKcFqT4ldg3JgAKOQ8OhYlFjX92BxGuFE=",
   "Source": "OlmosBartending.com",
   "BasePath": "_content/OlmosBartending.com",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\siercks\\Documents\\GitHub\\olmos\\OlmosBartending.com\\wwwroot\\css\\w3.css",
+      "SourceId": "OlmosBartending.com",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\siercks\\Documents\\GitHub\\olmos\\OlmosBartending.com\\wwwroot\\",
+      "BasePath": "_content/OlmosBartending.com",
+      "RelativePath": "css/w3.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\w3.css"
     },
     {
       "Identity": "C:\\Users\\siercks\\Documents\\GitHub\\olmos\\OlmosBartending.com\\wwwroot\\favicon.ico",

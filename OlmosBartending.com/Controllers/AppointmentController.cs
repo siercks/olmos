@@ -27,7 +27,12 @@ namespace OlmosBartending.com.Controllers
         // GET: BookingController/Details/5
         public IActionResult Details(int id)
         {
-            return View();
+            var apptDetails = iCRUD.GetAppointment(id);
+            if(apptDetails == null)
+            {
+                return NotFound();
+            }
+            return View(apptDetails);
         }
         //[HttpPost]
         //[Authorize(Roles ="admin, sierx, client")]
@@ -74,24 +79,17 @@ namespace OlmosBartending.com.Controllers
         }
 
         // GET: BookingController/Delete/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult Delete(int id)
         {
-            return View();
+            iCRUD.DeleteAppointment(id);
+            ViewBag.Message = "Appointment deleted. Returning to index...";
+            return RedirectToAction("Index");
         }
 
         // POST: BookingController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
+        
+        
     }
 }
