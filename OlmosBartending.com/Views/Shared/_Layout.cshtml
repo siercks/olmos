@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3 w3-text-yellow w3-hover-text-white">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">OlmosBartending.com</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -20,30 +20,30 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li> |
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li> |
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Appointment" asp-action="Index">Appointment Index</a>
+                            <a class="nav-link text-light" asp-area="" asp-controller="Appointment" asp-action="Index">Appointment Index</a>
                         </li> |
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="About">Contact Site Owner</a>
+                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="About">Contact Site Owner</a>
                         </li> |
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Register">Create Account</a>
+                            <a class="nav-link text-light" asp-area="" asp-controller="User" asp-action="Register">Create Account</a>
                         </li> |
                         @if (User.Identity.IsAuthenticated)
                         {
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-controller="User" asp-action="Logout">Logout</a>
+                                <a class="nav-link text-light" asp-controller="User" asp-action="Logout">Logout</a>
                             </li>
                         }
                         else
                         {
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-controller="User" asp-action="Login">Login</a>
+                                <a class="nav-link text-light" asp-controller="User" asp-action="Login">Login</a>
                             </li>
                         }
                         @if (User.Identity.IsAuthenticated)
@@ -65,7 +65,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2022 - OlmosBartending.com - <a asp-area="" asp-controller="Home" asp-action="Index">Index</a>
+            &copy; 2023 - OlmosBartending.com - <a asp-area="" asp-controller="Home" asp-action="Index">Index</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
