@@ -15,7 +15,7 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="EventId" class="control-label"></label>
-                <input asp-for="EventId" class="form-control" />
+                <input asp-for="EventId" class="form-control" disabled/>
                 <span asp-validation-for="EventId" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -53,5 +53,5 @@
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-controller="Appointment" asp-action="Index">Back to List</a>
 </div>
