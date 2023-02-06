@@ -1,57 +1,83 @@
 ﻿@model OlmosBartending.com.Models.Appointment
-
 @{
     ViewData["Title"] = "Create";
     Layout = "~/Views/Shared/_LayoutBooking.cshtml";
 }
-
-<h1>Create</h1>
-
-<h4>Appointment</h4>
+<link rel="stylesheet" href="css/booking.css" />
+<style>
+    .test-form {
+        width: auto;
+        margin: auto;
+        margin-bottom: 15px;
+        background: #f7f7f7;
+        padding: 30px;
+        background-color: #262626;
+        color: #f7f7f7;
+    }
+    .page {
+        background-color: #262626;
+    }
+    page {
+        background-color: #262626;
+    }
+    body {
+        background-color: #262626;
+        color:antiquewhite;
+    }
+</style>
+<body >
+    
 <hr />
-<div class="row">
-    <div class="col-md-4">
+<div class="card test-form">
+        <div class="text-center">
+            <h1>Create a booking request!</h1>
+            <h6>This creates a booking request to be seen by Rolando.</h6>
+        </div>
+    <div class="card-body col-md-3 test-form">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="EventId" class="control-label"></label>
-                <input asp-for="EventId" class="form-control" disabled/>
-                <span asp-validation-for="EventId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CustomerName" class="control-label"></label>
-                <input asp-for="CustomerName" class="form-control" />
-                <span asp-validation-for="CustomerName" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CustomerEmail" class="control-label"></label>
-                <input asp-for="CustomerEmail" class="form-control" />
-                <span asp-validation-for="CustomerEmail" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="ServiceRequested" class="control-label"></label>
-                <select asp-for="ServiceRequested" asp-items="Html.GetEnumSelectList<ServiceRequested>()">
+            <div>
+            <div class="row mb-3">
+                <div class="col-md-6 float-md-start form-group">
+                    <label asp-for="CustomerName" class="control-label"></label>
+                    <input asp-for="CustomerName" class="form-control" />
+                    <span asp-validation-for="CustomerName" class="text-danger"></span>
+                </div>
+                <div class="col-md-6 float-md-end form-group">
+                    <label asp-for="CustomerEmail" class="control-label"></label>
+                    <input asp-for="CustomerEmail" class="form-control" />
+                    <span asp-validation-for="CustomerEmail" class="text-danger"></span>
+                </div>
+              </div>  
+            <div class="form-group row mb-3">
+                <div class="col-md-4 float-md-start form-group">
+                     <label asp-for="ServiceRequested" class="control-label"></label><br />
+                    <select asp-for="ServiceRequested" asp-items="Html.GetEnumSelectList<ServiceRequested>()" class="form-select">
                     <option value="">Please select:</option>
-                </select>
-                <span asp-validation-for="ServiceRequested" class="text-danger"></span>
+                     </select>
+                    <span asp-validation-for="ServiceRequested" class="text-danger"></span>
+                </div>
+                <div class="col-md-8 float-md-end form-group">
+                    <label asp-for="DateRequested" class="control-label"></label>
+                    <input asp-for="DateRequested" class="form-control" />
+                    <span asp-validation-for="DateRequested" class="text-danger"></span>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="DateRequested" class="control-label"></label>
-                <input asp-for="DateRequested" class="form-control" />
-                <span asp-validation-for="DateRequested" class="text-danger"></span>
+            <div class="form-group col-md-12 row mb-3">
+                <label asp-for="OptionalMessage" class="control-label" for="formWhite"></label>
+                <input asp-for="OptionalMessage" class="form-control" id="formWhite" textarea=""/>
+                <span asp-validation-for="OptionalMessage" class="text-danger" ></span>
             </div>
-            <div class="form-group">
-                <label asp-for="OptionalMessage" class="control-label"></label>
-                <input asp-for="OptionalMessage" class="form-control" />
-                <span asp-validation-for="OptionalMessage" class="text-danger"></span>
+            <div class="row mb-3">
+                    <button type="submit" value="Create" class="btn btn-primary btn-block">Create</button>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
+                <div class="form-group invisible">
+                    <label asp-for="EventId" class="control-label"></label>
+                    <input asp-for="EventId" class="form-control" disabled />
+                    <span asp-validation-for="EventId" class="text-danger"></span>
+                </div>
+                </div>
         </form>
     </div>
 </div>
-
-<div>
-    <a asp-controller="Appointment" asp-action="Index">Back to List</a>
-</div>
+</body>

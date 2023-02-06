@@ -1,24 +1,23 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create a booking request! - OlmosBartending.com</title>
 <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
 <link rel="stylesheet" href="css/w3.css" />
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewBag.Title</title>
-    
+    <link rel="stylesheet" href="css/booking.css" />
 </head>
-<body class="">
-    <div>
+@*<page>*@
+<body class="align-content-center">
+    <div class="align-content-center">
         @RenderBody()
     </div>
-
-    <footer class="border-top footer text-muted">
-        <div class="container">
+    <footer class="text-center text-muted">
+        <div class="">
             &copy; 2023 - OlmosBartending.com - <a asp-area="" asp-controller="Home" asp-action="Index">Exit out of booking view.</a>
         </div>
     </footer>
-
 </body>
+@*</page>*@
 </html>

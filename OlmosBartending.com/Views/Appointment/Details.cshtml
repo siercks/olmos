@@ -1,22 +1,24 @@
 ﻿@model OlmosBartending.com.Models.Appointment
-<link rel="stylesheet" href="css/w3.css" />
-
 @{
     ViewData["Title"] = "Details";
     Layout = "~/Views/Shared/_LayoutBooking.cshtml";
 }
+<link rel="stylesheet" href="css/booking.css" />
 
-<h1>Details for:</h1>
-<div class="">
-    <h4>@Html.DisplayFor(Model=>Model.CustomerName)'s @Html.DisplayFor(Model=>Model.ServiceRequested)</h4>
+<body class="page">
+<h2>Details for:<br />
+        @Html.DisplayFor(Model=>Model.CustomerName)'s @Html.DisplayFor(Model=>Model.ServiceRequested)
+    </h2>
+<div class="table">
     <hr />
     <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.EventId)
+        <div><dt class = "col-lg-10">
+            Appointment #@Html.DisplayFor(model => model.EventId)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.EventId)
-        </dd>
+            @*@Html.DisplayFor(model => model.EventId)*@
+                </dd>
+            </div>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.CustomerName)
         </dt>
@@ -53,3 +55,4 @@
     @Html.ActionLink("Edit", "Edit", new { id = Model.EventId  }) |
     <a asp-action="Index">Back to List</a>
 </div>
+</body>

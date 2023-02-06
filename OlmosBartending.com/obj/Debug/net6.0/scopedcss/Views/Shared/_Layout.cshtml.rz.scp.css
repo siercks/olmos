@@ -2,6 +2,24 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    margin-bottom: 60px;
+    background-color: #262626;
+    color: antiquewhite;
+    font-family: 'Sans Serif Collection';
+}
+
+.body[b-ppbs8a92ej] {
+    margin-bottom: 60px;
+    background-color: #262626;
+    color: antiquewhite;
+    font-family: 'Sans Serif Collection';
+}
+
+body[b-ppbs8a92ej] {
+    margin-bottom: 60px;
+    background-color: #262626;
+    color: antiquewhite;
+    font-family: 'Sans Serif Collection';
 }
 
 main[b-ppbs8a92ej] {

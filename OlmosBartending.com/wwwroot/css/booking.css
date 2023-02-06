@@ -13,14 +13,34 @@ html {
   min-height: 100%;
 }
 
+.table {
+    background-color: rgba(0, 0, 0, 0);
+    color: antiquewhite;
+}
+
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    background-color: #262626;
+    color: antiquewhite;
+    font-family: 'Sans Serif Collection';
 }
 .page {
     position: relative;
     display: flex;
     flex-direction: column;
-    font-family: Garamond;
+    margin-bottom: 60px;
+    background-color: #262626;
+    color: antiquewhite;
+    font-family: 'Sans Serif Collection';
+}
+page {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 60px;
+    background-color: #262626;
+    color: antiquewhite;
+    font-family: 'Sans Serif Collection';
 }
 
 img {
