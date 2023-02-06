@@ -46,9 +46,9 @@ namespace OlmosBartending.com.Controllers
         // POST: BookingController/Create
         [HttpPost]
         //[ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create(Appointment appointment)
+        public ActionResult Create(Appointment appointment)
         {
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
                 iCRUD.AddAppointment(appointment);
                 return RedirectToAction("Index");

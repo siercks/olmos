@@ -4,55 +4,83 @@
     Layout = "~/Views/Shared/_LayoutBooking.cshtml";
 }
 <link rel="stylesheet" href="css/booking.css" />
-
-<body class="page">
-<h2>Details for:<br />
-        @Html.DisplayFor(Model=>Model.CustomerName)'s @Html.DisplayFor(Model=>Model.ServiceRequested)
-    </h2>
-<div class="table">
-    <hr />
-    <dl class="row">
-        <div><dt class = "col-lg-10">
-            Appointment #@Html.DisplayFor(model => model.EventId)
-        </dt>
-        <dd class = "col-sm-10">
-            @*@Html.DisplayFor(model => model.EventId)*@
+<style>
+    .test-form {
+        width: auto;
+        margin: auto;
+        margin-bottom: 15px;
+        background: #f7f7f7;
+        padding: 30px;
+        background-color: #262626;
+        color: #f7f7f7;
+    }
+    .page {
+        background-color: #262626;
+    }
+    page {
+        background-color: #262626;
+    }
+    body {
+        background-color: #262626;
+        color:antiquewhite;
+    }
+</style>
+<body>
+<div class="card text-center test-form">
+        <div class="text-center">
+            <h2>
+                Details for:<br />
+        @Html.DisplayFor(Model=>Model.CustomerName)'s @Html.DisplayFor(Model=>Model.ServiceRequested)</h2>
+    <h4 class="float-md-none">Appointment #@Html.DisplayFor(model => model.EventId)</h4>
+    </div>
+    <div class="text-center test-form card-body">
+        <div class="">
+            <dl class="row form-group">
+                <div class="row form-group">
+                    <dt class = "col-sm-4">
+                        Customer Name:
+                    </dt>
+                    <dd class = "col-sm-8">
+                        @Html.DisplayFor(model => model.CustomerName)
+                    </dd>
+                </div>
+                <div class="row form-group">
+                    <dt class="col-sm-4">
+                        Customer Email:
+                    </dt>
+                    <dd class="col-sm-8">
+                        @Html.DisplayFor(model => model.CustomerEmail)
+                    </dd>
+                </div>
+                <div class="row form-group">
+                    <dt class="col-sm-4">
+                        Service Requested:
+                    </dt>
+                    <dd class="col-sm-8">
+                        @Html.DisplayFor(model => model.ServiceRequested)
+                    </dd>
+                </div>
+                <div class="row form-group">
+                    <dt class="col-sm-4">
+                        Time Requested:
+                    </dt>
+                    <dd class="col-sm-8">
+                        @Html.DisplayFor(model => model.DateRequested)
+                    </dd>
+                </div>
+                <dt class="col-sm-4">
+                    Message (Optional):
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.OptionalMessage)
                 </dd>
+            </dl>
+            <div>
+                @Html.ActionLink("Edit", "Edit", new { id = Model.EventId  }) |
+                <a asp-action="Index">Back to List</a>
             </div>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CustomerName)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.CustomerName)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CustomerEmail)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.CustomerEmail)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ServiceRequested)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.ServiceRequested)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.DateRequested)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.DateRequested)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.OptionalMessage)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.OptionalMessage)
-        </dd>
-    </dl>
+        </div>
+    </div>
 </div>
-<div>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.EventId  }) |
-    <a asp-action="Index">Back to List</a>
-</div>
+
 </body>

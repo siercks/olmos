@@ -25,9 +25,7 @@
         color:antiquewhite;
     }
 </style>
-<body >
-    
-<hr />
+<body>
 <div class="card test-form">
         <div class="text-center">
             <h1>Create a booking request!</h1>
@@ -37,46 +35,52 @@
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div>
-            <div class="row mb-3">
-                <div class="col-md-6 float-md-start form-group">
-                    <label asp-for="CustomerName" class="control-label"></label>
-                    <input asp-for="CustomerName" class="form-control" />
-                    <span asp-validation-for="CustomerName" class="text-danger"></span>
+                <div class="form-group row mb-3">
+                    <div class="col-sm-6 float-sm-start form-group">
+                        <label asp-for="CustomerName" class="control-label"></label>
+                        <input asp-for="CustomerName" class="form-control" placeholder="Your Name"/>
+                        <span asp-validation-for="CustomerName" class="text-danger"></span>
+                    </div>
+                    <div class="col-sm-6 float-sm-end form-group">
+                        <label asp-for="CustomerEmail" class="control-label"></label>
+                        <input asp-for="CustomerEmail" class="form-control" type="email" placeholder="Your Email"/>
+                        <span asp-validation-for="CustomerEmail" class="text-danger"></span>
+                    </div>
+                </div>  
+                <div class="form-group row mb-3">
+                    <div class="col-sm-6 float-sm-start form-group">
+                         <label asp-for="ServiceRequested" class="control-label"></label><br />
+                         <select asp-for="ServiceRequested" asp-items="Html.GetEnumSelectList<ServiceRequested>()" class="form-select">
+                         <option value="">Please select:</option>
+                         </select>
+                         <span asp-validation-for="ServiceRequested" class="text-danger"></span>
+                    </div>
+                    <div class="col-sm-6 float-sm-end form-group">
+                        <label asp-for="DateRequested" class="control-label"></label>
+                        <input asp-for="DateRequested" class="form-control" type="datetime-local" value="datetime-local"/>
+                        <span asp-validation-for="DateRequested" class="text-danger"></span>
+                    </div>
                 </div>
-                <div class="col-md-6 float-md-end form-group">
-                    <label asp-for="CustomerEmail" class="control-label"></label>
-                    <input asp-for="CustomerEmail" class="form-control" />
-                    <span asp-validation-for="CustomerEmail" class="text-danger"></span>
+                <div class="form-group row mb-3 col-sm-auto">
+                    <div>
+                        <label asp-for="OptionalMessage" class="control-label"></label>
+                        <textarea asp-for="OptionalMessage" class="form-control" rows="3" placeholder="Put any additional information you would like to communicate."></textarea>
+                        <span asp-validation-for="OptionalMessage" class="text-danger"></span>
+                    </div>
                 </div>
-              </div>  
-            <div class="form-group row mb-3">
-                <div class="col-md-4 float-md-start form-group">
-                     <label asp-for="ServiceRequested" class="control-label"></label><br />
-                    <select asp-for="ServiceRequested" asp-items="Html.GetEnumSelectList<ServiceRequested>()" class="form-select">
-                    <option value="">Please select:</option>
-                     </select>
-                    <span asp-validation-for="ServiceRequested" class="text-danger"></span>
+                <div class="form-group row mb-3 col-sm-auto">
+                    <div>
+                        <button type="submit" value="Create" class="btn btn-primary btn-block container-fluid">Create</button>
+                    </div>
                 </div>
-                <div class="col-md-8 float-md-end form-group">
-                    <label asp-for="DateRequested" class="control-label"></label>
-                    <input asp-for="DateRequested" class="form-control" />
-                    <span asp-validation-for="DateRequested" class="text-danger"></span>
+                <div class="row container-fluid">
+                    <div class="form-group invisible text-sm-center container-fluid">
+                        <label asp-for="EventId" class="control-label"></label>
+                        <input asp-for="EventId" class="form-control" disabled />
+                        <span asp-validation-for="EventId" class="text-danger"></span>
+                    </div>
                 </div>
             </div>
-            <div class="form-group col-md-12 row mb-3">
-                <label asp-for="OptionalMessage" class="control-label" for="formWhite"></label>
-                <input asp-for="OptionalMessage" class="form-control" id="formWhite" textarea=""/>
-                <span asp-validation-for="OptionalMessage" class="text-danger" ></span>
-            </div>
-            <div class="row mb-3">
-                    <button type="submit" value="Create" class="btn btn-primary btn-block">Create</button>
-            </div>
-                <div class="form-group invisible">
-                    <label asp-for="EventId" class="control-label"></label>
-                    <input asp-for="EventId" class="form-control" disabled />
-                    <span asp-validation-for="EventId" class="text-danger"></span>
-                </div>
-                </div>
         </form>
     </div>
 </div>

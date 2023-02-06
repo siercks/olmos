@@ -26,15 +26,16 @@ namespace OlmosBartending.com.Models
         [Display(Name = "Event Type")]
         [Required(ErrorMessage = "Bookings cannot be made without a requested service.")]
         public ServiceRequested ServiceRequested { get; set; }
-        [Display(Name = "Event Date")]
+        [Display(Name = "Event Date & Time")]
         [Required(ErrorMessage = "Bookings cannot be made without a date and time entered.")]
-        public DateTime? DateRequested { get; set; }
+        public DateTime DateRequested { get; set; }
         //[Display(Name = "Event Starts At:")]
         //public TimeOnly? TimeStart { get; set; }
         //[Display(Name = "Event Ends At:")]
         //[Required(ErrorMessage = "Bookings cannot be made without a requested end time.")]
         //public TimeOnly? TimeEnd { get; set; }
         [Display(Name = "Message (Optional)")]
+        [DisplayFormat(NullDisplayText="N/A")]
         public string? OptionalMessage { get; set; }
 
     }
