@@ -20,15 +20,14 @@ namespace OlmosBartending.com.Controllers
             this.iCRUD = iCRUD;
             this._captchaValidator = captchaValidator;
         }
-        // GET: BookingController
+        [Authorize(Roles = "admin")]
         public IActionResult Index()
         {
             IndexViewModel model = new IndexViewModel();
             model.AppointmentList = iCRUD.GetAppointmentList();
             return View(model);
         }
-
-        // GET: BookingController/Details/5
+        [Authorize(Roles = "admin")]
         public IActionResult Details(int id)
         {
             var apptDetails = iCRUD.GetAppointment(id);
@@ -56,7 +55,9 @@ namespace OlmosBartending.com.Controllers
             if (ModelState.IsValid)
             {
                 iCRUD.AddAppointment(appointment);
-                return RedirectToAction("Index");
+                ViewBag.Alert = "Success!";
+                ViewBag.Message = "Success!";
+                return RedirectToRoute(new { Action="Index", Controller="Home"});
             }
             ViewBag.Message = "Error adding appointment. Please try again?";
             return View(appointment);
@@ -79,6 +80,7 @@ namespace OlmosBartending.com.Controllers
         //}
 
         // GET: BookingController/Edit/5
+        [Authorize(Roles ="admin")]
         public IActionResult Edit(int id)
         {
             var apptToEdit = iCRUD.GetAppointment(id);

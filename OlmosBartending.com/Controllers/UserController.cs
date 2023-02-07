@@ -85,7 +85,7 @@ namespace OlmosBartending.com.Controllers
         }
         public IActionResult AccessDenied()
         {
-            return View();
+            return RedirectToPage("/Denied");
         }
     }
 }

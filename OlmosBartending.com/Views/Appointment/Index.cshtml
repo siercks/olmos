@@ -16,14 +16,20 @@
         background: #262626;
         padding: 20px;
         margin: 30px 0;
+        display:block;
         box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    }
+    .my-customer-scrollbar {
+        position:relative;
+        height:400px;
+        overflow:auto;
     }
 </style>
 
 
 <div class="container">
     <h1 class="text-center">Index</h1>
-    <div class="table-wrapper">
+    <div class="table-wrapper my-customer-scrollbar">
         <table class="table table-striped" style="">
             <thead>
                 <tr class="text-lg">
