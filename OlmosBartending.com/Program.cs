@@ -4,11 +4,14 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using GoogleReCaptcha.V3.Interface;
+using GoogleReCaptcha.V3;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddHttpClient<ICaptchaValidator, GoogleReCaptchaValidator>();
 builder.Services.AddRazorPages();
 builder.Services.AddScoped<ICRUD, DBcrud>();
 //builder.Services.AddDbContext<UserContext>(options => options.UseSqlite("Data Source=UserList.db"));

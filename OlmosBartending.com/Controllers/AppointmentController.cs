@@ -1,20 +1,24 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using GoogleReCaptcha.V3.Interface;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Identity.Client;
 using OlmosBartending.com.Models;
 using OlmosBartending.com.Services;
+using OlmosBartending.com.ViewModels;
 //using OlmosBartending.com.Services;
 
 namespace OlmosBartending.com.Controllers
 {
     public class AppointmentController : Controller
     {
+        private readonly ICaptchaValidator _captchaValidator;
         private ICRUD iCRUD;
-        public AppointmentController(ICRUD iCRUD)
+        public AppointmentController(ICRUD iCRUD, ICaptchaValidator captchaValidator)
         {
             this.iCRUD = iCRUD;
+            this._captchaValidator = captchaValidator;
         }
         // GET: BookingController
         public IActionResult Index()
@@ -34,8 +38,9 @@ namespace OlmosBartending.com.Controllers
             }
             return View(apptDetails);
         }
-        //[HttpPost]
-        //[Authorize(Roles ="admin, sierx, client")]
+        //This retrieves the Create view, enabling the Create method below to see the
+        //max ID. 
+        [HttpGet]
         public IActionResult Create()
         {
             var newAppt = new Appointment();
@@ -56,6 +61,22 @@ namespace OlmosBartending.com.Controllers
             ViewBag.Message = "Error adding appointment. Please try again?";
             return View(appointment);
         }
+
+        //[HttpPost]
+        //public IActionResult Create(Appointment appointment, CaptchaViewModel captchaView)
+        //{
+        //    if (!await _captchaValidator.IsCaptchaPassedAsync(Index.Captcha))
+        //    {
+        //        return View();
+        //    }
+        //    if (ModelState.IsValid)
+        //    {
+        //        iCRUD.AddAppointment(appointment);
+        //        return RedirectToAction("Index");
+        //    }
+        //    ViewBag.Message = "Error adding appointment. Please try again?";
+        //    return View(appointment);
+        //}
 
         // GET: BookingController/Edit/5
         public IActionResult Edit(int id)
@@ -81,6 +102,7 @@ namespace OlmosBartending.com.Controllers
         // GET: BookingController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles ="admin")]
         public IActionResult Delete(int id)
         {
             iCRUD.DeleteAppointment(id);

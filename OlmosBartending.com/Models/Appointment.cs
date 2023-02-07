@@ -37,6 +37,8 @@ namespace OlmosBartending.com.Models
         [Display(Name = "Message (Optional)")]
         [DisplayFormat(NullDisplayText="N/A")]
         public string? OptionalMessage { get; set; }
+        //[Required]
+        //public string? Captcha { get; set; }
 
     }
 }
