@@ -4,6 +4,13 @@
     Layout = "~/Views/Shared/_LayoutBooking.cshtml";
 }
 <link rel="stylesheet" href="css/booking.css" />
+<script src="js/site.js"></script>
+<script src="https://www.google.com/recaptcha/api.js"></script>
+<script>
+   function onSubmit(token) {
+     document.getElementById("demo-form").submit();
+   }
+ </script>
 <style>
     .test-form {
         width: auto;
@@ -68,9 +75,31 @@
                         <span asp-validation-for="OptionalMessage" class="text-danger"></span>
                     </div>
                 </div>
+                @*<div class="form-group row mb-3 col-sm-auto">
+                    <div>
+                       <h3>Validate you are not a robot:</h3>
+                        <div id="captchaBackground">
+                        <canvas id="captcha">captcha text</canvas>
+                        <input id="textBox" type="text" name="text">
+                        <div id="buttons">
+                            <input id="submitButton" type="submit">
+                            <button id="refreshButton" type="submit">Refresh</button>
+                        </div>
+                                <span id="output"></span>
+                            </div>
+                    </div>
+                </div>*@
+               @*<div>
+                   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+                      <form action="?" method="POST">
+                      <div class="g-recaptcha" data-sitekey="your_site_key"></div>
+                      <br/>
+                      <input type="submit" value="Submit">
+                    </form>
+               </div>*@
                 <div class="form-group row mb-3 col-sm-auto">
                     <div>
-                        <button type="submit" value="Create" class="btn btn-primary btn-block container-fluid">Create</button>
+                            <button type="submit" value="Create" class="btn btn-warning container-fluid g-recaptcha" data-sitekey="6LdKJ18kAAAAAEJZRKIvl9dqqKHXTYEd9kw34CeV" data-callback="onSubmit" data-action="submit">Create</button>
                     </div>
                 </div>
                 <div class="row container-fluid">

@@ -2173,21 +2173,21 @@ progress {
 }
 
 .form-control {
-  display: block;
-  width: 100%;
-  padding: 0.375rem 0.75rem;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #212529;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 1px solid #ced4da;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border-radius: 0.25rem;
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #F9A70E;
+    background-color: #262626;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
   .form-control {
@@ -2201,26 +2201,26 @@ progress {
   cursor: pointer;
 }
 .form-control:focus {
-  color: #212529;
-  background-color: #fff;
-  border-color: #86b7fe;
-  outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+    color: #F9A70E;
+    background-color: #262626;
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
 .form-control::-webkit-date-and-time-value {
   height: 1.5em;
 }
 .form-control::-moz-placeholder {
-  color: #6c757d;
-  opacity: 1;
+    color: #262626;
+    opacity: 1;
 }
 .form-control::placeholder {
-  color: #6c757d;
-  opacity: 1;
+    color: #262626;
+    opacity: 1;
 }
 .form-control:disabled, .form-control[readonly] {
-  background-color: #e9ecef;
-  opacity: 1;
+    background-color: #262626;
+    opacity: 1;
 }
 .form-control::file-selector-button {
   padding: 0.375rem 0.75rem;
@@ -2963,9 +2963,10 @@ textarea.form-control-lg {
 }
 
 .btn-primary {
-  color: #f7f7f7;
-  background-color: #B5D43B;
-  border-color: #F7F7F7;
+    color: #f7f7f7;
+    background-color: #F9A70E;
+    border-color: #F7F7F7;
+    !important;
 }
 .btn-primary:hover {
   color: #000000;
@@ -3020,6 +3021,13 @@ textarea.form-control-lg {
   color: #fff;
   background-color: #6c757d;
   border-color: #6c757d;
+}
+
+.btn-tertiary {
+    color: #F9A70E;
+    background-color: #F9A70E;
+    border-color: #F9A70E;
+    !important;
 }
 
 .btn-success {

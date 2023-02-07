@@ -47,7 +47,6 @@
 <body>
 <h4></h4>
 <hr />
-@*<div class="card text-white" >*@
 <div class="card-body p-5" style="border-radius:1rem;">
         <div class="login-form" style="border-radius:1rem;">
         <form asp-action="Login">
@@ -57,11 +56,11 @@
                 <input asp-for="UserName" class="form-control" placeholder="Username" required="required" />
                 <span asp-validation-for="UserName" class="text-danger" ></span>
             </div><br />
-            <div class="form-group">
+            <div class="form-group mb-3">
                 <input asp-for="Password" class="form-control" placeholder="Password" required="required" />
                 <span asp-validation-for="Password" class="text-danger"></span>
-            </div><br />
-            <div class="row mb-4">
+            </div>
+            <div class="row mb-1">
                 <div class="col d-flex justify-content-center">
                     <div class="form-check">
                         <label>
@@ -69,19 +68,13 @@
                         </label>
                     </div>
                 </div>
-                <div class="col float-md-end">
+                <div class="col float-md-end mb-3">
                     <a asp-action="Register">Create an account.</a>
                 </div><br />
-                <button type="submit" value="Log In" class="btn btn-primary btn-block mb-4">Log In</button>
+                    <div><button type="submit" value="Log In" class="btn btn-warning btn-block container-fluid">Log In</button></div>
 
             </div>
         </form>
     </div>
 </div>
-@*</div>*@
 </body>
-
-
-@*@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}*@
