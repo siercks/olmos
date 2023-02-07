@@ -15,7 +15,8 @@ html {
 
 body {
     margin-bottom: 60px;
-    
+    background-color: #a58c71;
+    color: #313131;
 }
 .page {
     position: relative;
@@ -29,8 +30,12 @@ img {
 }
 
 .profile {
-    width: 50%;
+    width: 40%;
     border-radius: 50%;
     margin-bottom: 1rem;
     float: right;
+}
+
+a {
+    color: #F9A70E;
 }

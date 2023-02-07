@@ -4,36 +4,55 @@
     Layout = "~/Views/Shared/_LayoutBooking.cshtml";
 }
 <link rel="stylesheet" href="css/booking.css" />
+<style>
+    table.table tr th, table.table tr td {
+        border-color: #e9e9e9;
+    }
+    table.table-striped tbody tr:nth-of-type(odd) {
+    	background-color: #494949;
+        color:#ffffff;
+	}
+    .table-wrapper {
+        background: #262626;
+        padding: 20px;
+        margin: 30px 0;
+        box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    }
+</style>
 
-<h1 style="align-content:center">Index</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table" style="">
-    <thead>
-        <tr>
-            <th>
-                @*displaying property name *@
-                @Html.DisplayNameFor(model=>model.AppointmentList.First().EventId)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model=>model.AppointmentList.First().CustomerName)
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model.AppointmentList)
-        {
+<div class="container">
+    <h1 class="text-center">Index</h1>
+    <div class="table-wrapper">
+        <table class="table table-striped" style="">
+            <thead>
                 <tr>
-                    <td>#@Html.DisplayFor(modelitem=>item.EventId)</td>@*property value*@
-                    <td>@Html.DisplayFor(modelitem=>item.CustomerName)</td>
-                    <td>
-                    <a asp-action="Details" asp-controller="Appointment" asp-route-id="@item.EventId">Details</a> |
-                    <a asp-action="Edit" asp-controller="Appointment" asp-route-id="@item.EventId">Edit</a> |
-                    <a asp-action="Delete" asp-controller="Appointment" asp-route-id="@item.EventId">Delete</a>
-                    </td>
+                    <th>
+                        @*displaying property name *@
+                        @Html.DisplayNameFor(model=>model.AppointmentList.First().EventId)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model=>model.AppointmentList.First().CustomerName)
+                    </th>
                 </tr>
-        }
-    </tbody>
-</table>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.AppointmentList)
+                {
+                        <tr>
+                            <td>#@Html.DisplayFor(modelitem=>item.EventId)</td>@*property value*@
+                            <td>@Html.DisplayFor(modelitem=>item.CustomerName)</td>
+                            <td>
+                            <a asp-action="Details" asp-controller="Appointment" asp-route-id="@item.EventId">Details</a> |
+                            <a asp-action="Edit" asp-controller="Appointment" asp-route-id="@item.EventId">Edit</a> |
+                            <a asp-action="Delete" asp-controller="Appointment" asp-route-id="@item.EventId">Delete</a>
+                            </td>
+                        </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <p style="font-size:16px" class="text-center">
+        <a asp-action="Create">Create New</a>
+    </p>
+</div>

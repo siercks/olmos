@@ -13,11 +13,6 @@ namespace OlmosBartending.com.Controllers
             _logger = logger;
         }
 
-        //public IActionResult Index2()
-        //{
-        //    return View();
-        //}
-
         public IActionResult Index()
         {
             return View();
@@ -27,7 +22,10 @@ namespace OlmosBartending.com.Controllers
         {
             return View();
         }
-
+        public IActionResult About()
+        {
+            return Redirect("https://siercks.org");
+        }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
