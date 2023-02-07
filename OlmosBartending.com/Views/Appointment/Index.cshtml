@@ -34,6 +34,9 @@
                     <th class="text-decoration-underline text-sm-center">
                         @Html.DisplayNameFor(model=>model.AppointmentList.First().CustomerName)
                     </th>
+                    <th class="text-decoration-underline text-sm-center">
+                        @Html.DisplayNameFor(model=>model.AppointmentList.First().DateRequested)
+                    </th>
                     <th class="text-decoration-underline">
                         Actions
                     </th>
@@ -45,6 +48,7 @@
                         <tr>
                             <td class="text-sm-end">#@Html.DisplayFor(modelitem=>item.EventId)</td>@*property value*@
                             <td class="text-sm-center">@Html.DisplayFor(modelitem=>item.CustomerName)</td>
+                            <td class="text-sm-center">@Html.DisplayFor(modelitem=>item.DateRequested)</td>
                             <td class="text-sm-start">
                             <a asp-action="Details" asp-controller="Appointment" asp-route-id="@item.EventId">Details</a> |
                             <a asp-action="Edit" asp-controller="Appointment" asp-route-id="@item.EventId">Edit</a> |
@@ -55,8 +59,6 @@
             </tbody>
         </table>
     </div>
-    @*<p style="font-size:16px" class="text-center">
-        <button class="btn btn-warning" asp-controller="Appointment" asp-action="Create">Create New</button>
-    </p>*@
-    <a asp-action="Create">Create New Appointment</a>
+    
+    <div class="text-center"><a asp-action="Create">Create New Appointment</a></div>
 </div>
