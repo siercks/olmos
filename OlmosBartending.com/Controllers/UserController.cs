@@ -19,7 +19,7 @@ namespace OlmosBartending.com.Controllers
         {
             if(User.Identity.IsAuthenticated)
             {
-                return RedirectToAction("Index", "Appointment");
+                return RedirectToAction("Index", "Home");
             }
             return View();
         }
@@ -32,7 +32,7 @@ namespace OlmosBartending.com.Controllers
                 var result = await signInManager.PasswordSignInAsync(loginViewModel.UserName, loginViewModel.Password, loginViewModel.RememberMe, lockoutOnFailure:false);
                 if (result.Succeeded)
                 {
-                    return RedirectToAction("Index", "Appointment");
+                    return RedirectToAction("Index", "Home");
                 }
             }
             ModelState.AddModelError("", "Failed to login");

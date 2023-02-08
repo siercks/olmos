@@ -18,6 +18,11 @@ namespace OlmosBartending.com.Controllers
             return View();
         }
 
+        public IActionResult Media()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();

@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Identity.Client;
 using OlmosBartending.com.Models;
 using OlmosBartending.com.Services;
@@ -20,7 +21,7 @@ namespace OlmosBartending.com.Controllers
             this.iCRUD = iCRUD;
             this._captchaValidator = captchaValidator;
         }
-        [Authorize(Roles = "admin")]
+        //[Authorize(Roles = "ADMIN, admin, aDMIN, Admin, webadmin")]
         public IActionResult Index()
         {
             IndexViewModel model = new IndexViewModel();
@@ -100,20 +101,15 @@ namespace OlmosBartending.com.Controllers
             ViewBag.Message = "Error editing appointment.";
             return View(appt);
         }
-
         // GET: BookingController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        [Authorize(Roles ="admin")]
+        [HttpGet]
+        //[ValidateAntiForgeryToken]
+        //[Authorize(Roles ="admin")]
         public IActionResult Delete(int id)
         {
             iCRUD.DeleteAppointment(id);
-            ViewBag.Message = "Appointment deleted. Returning to index...";
+            //ViewBag.Message = "Appointment deleted. Returning to index...";
             return RedirectToAction("Index");
         }
-
-        // POST: BookingController/Delete/5
-        
-        
     }
 }
