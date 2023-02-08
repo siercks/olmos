@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "cWdeGvAc03YSqqwqGkvM26y+tEacdm88FAMU7MDzAfA=",
+  "Hash": "WZvkfCn70FKVsoCNKdkbKy4B+SaiOw/FoxUgs3OrNrg=",
   "Source": "OlmosBartending.com",
   "BasePath": "_content/OlmosBartending.com",
   "Mode": "Default",
@@ -1122,6 +1122,23 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
+      "Identity": "C:\\Users\\siercks\\Documents\\GitHub\\olmos\\OlmosBartending.com\\wwwroot\\loop.MOV",
+      "SourceId": "OlmosBartending.com",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\siercks\\Documents\\GitHub\\olmos\\OlmosBartending.com\\wwwroot\\",
+      "BasePath": "_content/OlmosBartending.com",
+      "RelativePath": "loop.MOV",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\loop.MOV"
+    },
+    {
       "Identity": "C:\\Users\\siercks\\Documents\\GitHub\\olmos\\OlmosBartending.com\\wwwroot\\pose.jpg",
       "SourceId": "OlmosBartending.com",
       "SourceType": "Discovered",
@@ -1137,6 +1154,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\pose.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\siercks\\Documents\\GitHub\\olmos\\OlmosBartending.com\\wwwroot\\video.MOV",
+      "SourceId": "OlmosBartending.com",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\siercks\\Documents\\GitHub\\olmos\\OlmosBartending.com\\wwwroot\\",
+      "BasePath": "_content/OlmosBartending.com",
+      "RelativePath": "video.MOV",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\video.MOV"
     }
   ]
 }

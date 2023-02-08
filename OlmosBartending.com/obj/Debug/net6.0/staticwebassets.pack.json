@@ -257,8 +257,16 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "C:\\Users\\siercks\\Documents\\GitHub\\olmos\\OlmosBartending.com\\wwwroot\\loop.MOV",
+      "PackagePath": "staticwebassets\\loop.MOV"
+    },
+    {
       "Id": "C:\\Users\\siercks\\Documents\\GitHub\\olmos\\OlmosBartending.com\\wwwroot\\pose.jpg",
       "PackagePath": "staticwebassets\\pose.jpg"
+    },
+    {
+      "Id": "C:\\Users\\siercks\\Documents\\GitHub\\olmos\\OlmosBartending.com\\wwwroot\\video.MOV",
+      "PackagePath": "staticwebassets\\video.MOV"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.OlmosBartending.com.Microsoft.AspNetCore.StaticWebAssets.props",

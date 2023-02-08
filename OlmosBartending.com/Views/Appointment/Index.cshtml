@@ -8,6 +8,8 @@
     table.table tr th, table.table tr td {
         border-color: #e9e9e9;
         color:antiquewhite;
+        align-content:center;
+        margin-bottom:15px;
     }
     table.table-striped tbody tr:nth-of-type(odd) {
     	background-color: #494949;
@@ -21,7 +23,7 @@
         display:block;
         box-shadow: 0 1px 1px rgba(0,0,0,.05);
         font-size:10px;
-        width:430px;
+        width:630px;
     }
     .my-customer-scrollbar {
         position:relative;
@@ -43,21 +45,20 @@
 
 <div class="container">
     <h1 class="text-center">Index</h1>
-    <div class="table-wrapper my-customer-scrollbar">
+    <div class="table-wrapper my-customer-scrollbar text-center">
         <table class="table table-striped" style="">
             <thead>
                 <tr class="text-lg text-center align-content-center align-items-md-center">
-                    <th class="text-decoration-underline text-sm-end col-2">
-                        @*displaying property name *@
+                    <th class="text-decoration-underline text-sm-end col-1">
                         @Html.DisplayNameFor(model=>model.AppointmentList.First().EventId)
                     </th>
-                    <th class="text-decoration-underline text-sm-center col-3">
+                    <th class="text-decoration-underline text-sm-center col-2">
                         @Html.DisplayNameFor(model=>model.AppointmentList.First().CustomerName)
                     </th>
-                    <th class="text-decoration-underline text-sm-center col-3">
+                    <th class="text-decoration-underline text-sm-center col-1">
                         @Html.DisplayNameFor(model=>model.AppointmentList.First().DateRequested)
                     </th>
-                    <th class="text-decoration-underline col-3">
+                    <th class="text-decoration-underline col-1">
                         Actions
                     </th>
                 </tr>
@@ -66,16 +67,15 @@
                 @foreach (var item in Model.AppointmentList)
                 {
                         <tr>
-                            <td class="text-sm-end">#@Html.DisplayFor(modelitem=>item.EventId)</td>@*property value*@
-                            <td class="text-sm-center">@Html.DisplayFor(modelitem=>item.CustomerName)</td>
+                        <td class="text-sm-end"><a asp-action="Details" asp-controller="Appointment" asp-route-id="@item.EventId">#@Html.DisplayFor(modelitem=>item.EventId)</a></td>@*property value*@
+                        <td class="text-sm-center"><a asp-action="Details" asp-controller="Appointment" asp-route-id="@item.EventId">@Html.DisplayFor(modelitem=>item.CustomerName)</a></td>
                             <td class="text-sm-center">@Html.DisplayFor(modelitem=>item.DateRequested)</td>
-                            <td class="text-sm-start">
-                            <a asp-action="Details" asp-controller="Appointment" asp-route-id="@item.EventId">Details</a> |
+                            <td class="text-sm-center">
                             <a asp-action="Edit" asp-controller="Appointment" asp-route-id="@item.EventId">Edit</a> |
                             <a asp-action="Delete" asp-controller="Appointment" asp-route-id="@item.EventId">Delete</a>
-                            @Html.ActionLink("Delete", "", 
+                            @*@Html.ActionLink("Delete", "", 
                             new{id=item.EventId}, 
-                            new{ onclick = "return confirm('Do you really want to delete this appointment: " + item.EventId + "?')"})
+                            new{ onclick = "return confirm('Do you really want to delete this appointment: " + item.EventId + "?')"})*@
                             </td>
                         </tr>
                 }
