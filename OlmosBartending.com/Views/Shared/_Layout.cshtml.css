@@ -13,6 +13,7 @@
     background-color: #262626;
     color: antiquewhite;
     font-family: 'Sans Serif Collection';
+    display:grid;
 }
 
 body {
@@ -35,10 +36,16 @@ img {
 }
 
 .home-pic {
-    float: right;
     border-radius: 50%;
     width: 30%;
     height: auto;
+}
+
+.left-half {
+    grid-column:1;
+}
+.right-half {
+    grid-column: 2;
 }
 
 .top-row {

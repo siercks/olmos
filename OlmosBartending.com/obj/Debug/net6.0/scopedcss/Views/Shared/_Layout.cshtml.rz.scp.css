@@ -13,6 +13,7 @@ page[b-ppbs8a92ej] {
     background-color: #262626;
     color: antiquewhite;
     font-family: 'Sans Serif Collection';
+    display:grid;
 }
 
 body[b-ppbs8a92ej] {
@@ -35,10 +36,16 @@ img[b-ppbs8a92ej] {
 }
 
 .home-pic[b-ppbs8a92ej] {
-    float: right;
     border-radius: 50%;
     width: 30%;
     height: auto;
+}
+
+.left-half[b-ppbs8a92ej] {
+    grid-column:1;
+}
+.right-half[b-ppbs8a92ej] {
+    grid-column: 2;
 }
 
 .top-row[b-ppbs8a92ej] {

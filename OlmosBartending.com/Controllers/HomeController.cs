@@ -22,11 +22,6 @@ namespace OlmosBartending.com.Controllers
         {
             return View();
         }
-
-        public IActionResult Privacy()
-        {
-            return View();
-        }
         public IActionResult About()
         {
             return Redirect("https://siercks.org");
