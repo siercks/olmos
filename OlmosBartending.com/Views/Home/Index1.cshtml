@@ -1,0 +1,147 @@
+﻿@model OlmosBartending.com.Models.Appointment
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_LayoutBooking.cshtml";
+}
+@*@section scripts {
+    <partial name="_CaptchaScripts"/>
+}*@
+<link rel="stylesheet" href="css/booking.css" />
+<script src="js/site.js"></script>
+<script src="https://www.google.com/recaptcha/api.js"></script>
+<script>
+    function onSubmit(token) {
+        document.getElementById("demo-form").submit();
+    }
+</script>
+<style>
+    .test-form {
+        width: auto;
+        margin: auto;
+        margin-bottom: 15px;
+        background: #f7f7f7;
+        padding: 30px;
+        background-color: #262626;
+        color: #f7f7f7;
+    }
+
+    .page {
+        background-color: #262626;
+    }
+
+    page {
+        background-color: #262626;
+    }
+
+    body {
+        background-color: #262626;
+        color: antiquewhite;
+    }
+</style>
+<body>
+    <page>
+        <h1><i>"Enjoy the party, I'll do the rest."</i></h1>
+        <h1><b><u>Your Favorite Bartender:</u> <br />Rolando Olmos</b></h1>
+        <body>
+            <div class="custom-container">
+                <div class="right-half">
+                    <img src="pose.jpg"
+                         style="object-fit:scale-down"
+                         class="profile" />
+                </div>
+                <div class="left-half">
+                    <h2>Bartending Service</h2>
+                    Bartending and serving the Coachella Valley since <u>1985</u>!
+                    <br /><br />
+                    I'm for hire for birthdays, quincineras, and any celebration for your bartending needs.
+                    <br>
+                    <br>
+                    <h2 class="text-center"><a href="mailto:olmosrolando123@gmail.com">Email Rolando!</a></h2>
+                    <br>
+                </div>
+            </div>
+
+        </body>
+    </page>
+    <div class="card test-form">
+        <div class="text-center">
+            <h1>Create a booking request!</h1>
+            <h6>This creates a booking request to be seen by Rolando.</h6>
+        </div>
+        <div class="card-body col-md-3 test-form">
+            <form asp-action="Create" method="POST" id="demo-form">
+                @*<partial name="_CaptchaInput" />*@
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div>
+                    <div class="form-group row mb-3">
+                        <div class="col-sm-6 float-sm-start form-group">
+                            <label asp-for="CustomerName" class="control-label"></label>
+                            <input asp-for="CustomerName" class="form-control" placeholder="Your Name" />
+                            <span asp-validation-for="CustomerName" class="text-danger"></span>
+                        </div>
+                        <div class="col-sm-6 float-sm-end form-group">
+                            <label asp-for="CustomerEmail" class="control-label"></label>
+                            <input asp-for="CustomerEmail" class="form-control" type="email" placeholder="Your Email" />
+                            <span asp-validation-for="CustomerEmail" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row mb-3">
+                        <div class="col-sm-6 float-sm-start form-group">
+                            <label asp-for="ServiceRequested" class="control-label"></label><br />
+                            <select asp-for="ServiceRequested" asp-items="Html.GetEnumSelectList<ServiceRequested>()" class="form-select">
+                                <option value="">Please select:</option>
+                            </select>
+                            <span asp-validation-for="ServiceRequested" class="text-danger"></span>
+                        </div>
+                        <div class="col-sm-6 float-sm-end form-group">
+                            <label asp-for="DateRequested" class="control-label"></label>
+                            <input asp-for="DateRequested" class="form-control" type="datetime-local" value="datetime-local" />
+                            <span asp-validation-for="DateRequested" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row mb-3 col-sm-auto">
+                        <div>
+                            <label asp-for="OptionalMessage" class="control-label"></label>
+                            <textarea asp-for="OptionalMessage" class="form-control" rows="3" placeholder="Put any additional information you would like to communicate."></textarea>
+                            <span asp-validation-for="OptionalMessage" class="text-danger"></span>
+                        </div>
+                    </div>
+                    @*<div class="form-group row mb-3 col-sm-auto">
+                    <div>
+                    <h3>Validate you are not a robot:</h3>
+                    <div id="captchaBackground">
+                    <canvas id="captcha">captcha text</canvas>
+                    <input id="textBox" type="text" name="text">
+                    <div id="buttons">
+                    <input id="submitButton" type="submit">
+                    <button id="refreshButton" type="submit">Refresh</button>
+                    </div>
+                    <span id="output"></span>
+                    </div>
+                    </div>
+                    </div>*@
+                    @*<div>
+                    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+                    <form action="?" method="POST">
+                    <div class="g-recaptcha" data-sitekey="your_site_key"></div>
+                    <br/>
+                    <input type="submit" value="Submit">
+                    </form>
+                    </div>*@
+                    <div class="form-group row mb-3 col-sm-auto">
+                        <div>
+                            <button type="submit" value="Create" class="btn btn-warning container-fluid g-recaptcha" data-sitekey="6LdKJ18kAAAAAEJZRKIvl9dqqKHXTYEd9kw34CeV" data-callback="onSubmit" data-action="submit">Create</button>
+                        </div>
+                    </div>
+                    <div class="row container-fluid">
+                        <div class="form-group invisible text-sm-center container-fluid">
+                            <label asp-for="EventId" class="control-label"></label>
+                            <input asp-for="EventId" class="form-control" />
+                            <span asp-validation-for="EventId" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
